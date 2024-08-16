@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+.bg-custom {
+  background-color: rgb(90, 86, 86) !important;
+}
+
+.color-a {
+  color: red !important;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 18px;
+}
+.color-a:hover {
+  color: yellow;
+}
+
+.dropdown-item:hover {
+  background-color: blue !important;
+}
+
+/*# sourceMappingURL=styles.css.map */

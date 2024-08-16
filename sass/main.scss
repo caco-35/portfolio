@@ -1,0 +1,22 @@
+@import "./utilidades/variables";
+
+body {
+    margin: 0;
+}
+
+.bg-custom {
+    background-color: $bg-navbar !important; //usado para cambiar el fondo del bg del boostrap
+}
+
+.color-a {
+    color: red !important;
+    font-family: $font-page;
+    font-size: 18px;
+    &:hover{
+        color: yellow;
+    }
+}
+
+.dropdown-item:hover{
+    background-color: blue !important;
+}
