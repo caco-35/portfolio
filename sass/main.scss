@@ -2,15 +2,11 @@
 
 body {
     margin: 0;
-}
-
-.bg-custom {
-    background-color: $bg-navbar !important; //usado para cambiar el fondo del bg del boostrap
+    background-color: $bg-navbar !important;
 }
 
 .color-a {
-    color: red !important;
-    font-family: $font-page;
+    color: wheat !important;
     font-size: 18px;
     &:hover{
         color: yellow;

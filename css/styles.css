@@ -1,14 +1,10 @@
 body {
   margin: 0;
-}
-
-.bg-custom {
-  background-color: rgb(90, 86, 86) !important;
+  background-color: rgb(17, 17, 17) !important;
 }
 
 .color-a {
-  color: red !important;
-  font-family: "Helvetica", Arial, sans-serif;
+  color: wheat !important;
   font-size: 18px;
 }
 .color-a:hover {
