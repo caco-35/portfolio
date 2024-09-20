@@ -67,11 +67,12 @@ html{
 }
 .inicio .contenido-banner{
     padding: 20px;
-    background-color: #1e2326;
+    backdrop-filter: blur(20px);
     max-width: 350px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
+    box-shadow: 1px 2px 4px 1px rgb(43, 182, 159);
 }
 .inicio .contenido-banner img{
     margin-top: 40px;
