@@ -1,0 +1,257 @@
+header {
+  font-family: "Montserrat", sans-serif; /*Tipo de letra*/
+  font-weight: 600; /*Intencidad de negrita*/
+  font-size: 1.1rem;
+}
+header .logo {
+  width: 60px;
+}
+
+.about-me {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  flex-direction: row;
+}
+.about-me .image-container {
+  flex: 1;
+}
+.about-me .image-container img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0px 0px 20px rgb(35, 155, 71));
+}
+.about-me .text-container {
+  flex: 2;
+  padding-left: 20px;
+}
+.about-me .text-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.about-me .text-container p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.about-me .text-container .buttons {
+  display: flex;
+  gap: 10px;
+}
+.about-me .text-container .buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3 ease;
+}
+.about-me .text-container .buttons button:hover {
+  background-color: #0056b3;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.timeline .timeline-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #00adb5;
+}
+.timeline:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #00adb5;
+  top: 80px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+.timeline .timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+.timeline .timeline-item .content {
+  padding: 20px;
+  background-color: #393e46;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.timeline .timeline-item .content button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+.timeline .timeline-item .content button:hover {
+  background-color: #007f8c;
+}
+.timeline .timeline-item:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 4px solid #00adb5;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline .timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline .timeline-item.left:before {
+  right: -12px;
+}
+.timeline .timeline-item.right {
+  left: 50%;
+}
+.timeline .timeline-item.right:before {
+  left: -12px;
+}
+@media (max-width: 768px) {
+  .timeline .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .timeline .timeline-item.right {
+    left: 0;
+  }
+  .timeline .timeline-item:before {
+    left: 50%;
+    margin-left: -12px;
+  }
+}
+
+.projects {
+  padding: 40px 0;
+  text-align: center;
+}
+.projects .projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00adb5;
+}
+.projects .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.projects .card {
+  background-color: #393e46;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 15px;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.projects .card:hover {
+  transform: translateY(-10px);
+}
+.projects .card .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.projects .card .card-content {
+  padding: 20px;
+}
+.projects .card .card-content h3 {
+  font-size: 1.5rem;
+  color: #00adb5;
+}
+.projects .card .card-content p {
+  font-size: 1rem;
+  color: #eeeeee;
+}
+.projects .card .card-content .card-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.projects .card .card-content .card-buttons a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.projects .card .card-content .card-buttons .github-btn {
+  background-color: #222831;
+  padding: 10px;
+}
+.projects .card .card-content .card-buttons .github-btn img {
+  width: 24px;
+  height: 24px;
+}
+.projects .card .card-content .card-buttons .github-btn:hover {
+  background-color: #00adb5;
+}
+.projects .card .card-content .card-buttons .web-btn {
+  background-color: #00adb5;
+  font-size: 1rem;
+}
+.projects .card .card-content .card-buttons .web-btn:hover {
+  background-color: #007f8c;
+}
+@media (max-width: 768px) {
+  .projects .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-me .text-container {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .about-me .text-container h1 {
+    font-size: 2rem;
+  }
+  .about-me .text-container p {
+    font-size: 1rem;
+  }
+  .about-me .text-container .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .about-me .text-container .buttons button {
+    width: 100%;
+  }
+  .about-me .image-container img {
+    max-width: 150px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
