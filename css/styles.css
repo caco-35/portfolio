@@ -246,6 +246,84 @@ header .logo {
   }
 }
 
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+.contact-form .form-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.contact-form .form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.contact-form .form-container form .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.contact-form .form-container form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.contact-form .form-container form .form-group input, .contact-form .form-container form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.contact-form .form-container form .form-group input[type=file] {
+  padding: 0;
+}
+.contact-form .form-container form .form-group textarea {
+  resize: none;
+}
+.contact-form .form-container form .form-group button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.contact-form .form-container form .form-group button:hover {
+  background-color: #0056b3;
+}
+
+@media (min-width: 576px) {
+  .form-container {
+    max-width: 600px;
+  }
+}
+@media (min-width: 768px) {
+  .form-container {
+    max-width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .form-container {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-container {
+    max-width: 900px;
+  }
+}
 @media (max-width: 768px) {
   .about-me {
     flex-direction: column;
