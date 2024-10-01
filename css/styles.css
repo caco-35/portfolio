@@ -328,12 +328,13 @@ footer {
   position: relative;
   width: 100%;
   background-color: #3586ff;
-  min-height: 100px;
+  min-height: 80px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 100px;
 }
 footer .social-icon {
   position: relative;
@@ -342,6 +343,7 @@ footer .social-icon {
   align-items: center;
   margin: 10px 0;
   flex-wrap: wrap;
+  z-index: 1001;
 }
 footer .social-icon li {
   list-style: none;
@@ -361,6 +363,7 @@ footer p {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 5px;
+  z-index: 1001;
 }
 footer .waves .wave {
   position: absolute;
@@ -371,11 +374,29 @@ footer .waves .wave {
   background: url("../img/wave.png");
   background-size: 1000px 100px;
 }
-footer .waves .wave #wave1 {
+footer .waves .wave#wave1 {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
   animation: animateWave 4s linear infinite;
+}
+footer .waves .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .waves .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave 3s linear infinite;
+}
+footer .waves .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
 }
 
 @keyframes animateWave {
@@ -384,6 +405,14 @@ footer .waves .wave #wave1 {
   }
   100% {
     background-position-x: 0px;
+  }
+}
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
   }
 }
 @media (max-width: 768px) {
