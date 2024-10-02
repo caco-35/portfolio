@@ -1,9 +1,13 @@
+@import "./utilidades/variables";
+
+
 header {
-    font-family: "Montserrat", sans-serif; /*Tipo de letra*/
+    font-family: $font-stack; 
     font-weight: 600; /*Intencidad de negrita*/
     font-size: 1.1rem;
     .logo{
-        width: 60px
+        width: 60px;
+        margin-left: 20px;
     }
 }
 
@@ -11,20 +15,18 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 92.3vh; // Ocupa toda la pantalla
+  height: 92.3vh;
   background-image: url('../img/fondo.jpg');
   background-size: cover;
-
   .content-container {
-      background: rgba(255, 255, 255, 0.295); // Fondo semitransparente
-      backdrop-filter: blur(5px); // Efecto glass
+      background: $bg-container;
+      backdrop-filter: blur(5px);
       border-radius: 15px;
       padding: 20px;
       text-align: center;
-      max-width: 400px;
+      max-width: 350px;
       width: 100%;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
       .image-container {
           img {
               width: 100%;
@@ -32,17 +34,14 @@ header {
               margin-bottom: 15px;
           }
       }
-
       .text-container {
           h1 {
               margin-bottom: 10px;
           }
-
           p {
               margin-bottom: 20px;
               color: #333;
           }
-
           .buttons {
               button {
                   padding: 10px 20px;
@@ -50,44 +49,17 @@ header {
                   border: none;
                   border-radius: 5px;
                   cursor: pointer;
-                  background-color: #007bff;
+                  background-color: $bg-button;
                   color: white;
                   transition: background-color 0.3s ease;
-
                   &:hover {
-                      background-color: #0056b3;
+                      background-color: $bg-button-hover;
                   }
               }
           }
       }
   }
 }
-
-// Media queries para diseño responsive
-@media (min-width: 576px) {
-  .content-container {
-      max-width: 500px;
-  }
-}
-
-@media (min-width: 768px) {
-  .content-container {
-      max-width: 600px;
-  }
-}
-
-@media (min-width: 992px) {
-  .content-container {
-      max-width: 700px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .content-container {
-      max-width: 800px;
-  }
-}
-
 
 
 .timeline {
@@ -100,7 +72,7 @@ header {
       font-size: 2.5rem;
       font-weight: bold;
       margin-bottom: 40px; // Añade un margen inferior al título para separar la línea
-      color: #00adb5;
+      color: $bg-button;
     }
     &:before {
       content: "";
@@ -257,24 +229,12 @@ header {
       }
     }
 
-    @media (max-width: 768px) {
-      .projects-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .card {
-        width: 90%;
-      }
-    }
-  }
-  
   .contact-form {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; // Altura completa de la pantalla
     background-color: #f4f4f4;
-
     .form-container {
         background: rgba(255, 255, 255, 0.1); // Fondo semitransparente para efecto glass
         backdrop-filter: blur(10px);
@@ -284,12 +244,10 @@ header {
         width: 100%;
         text-align: center;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
         h2 {
             margin-bottom: 20px;
             color: #333;
         }
-
         form {
             .form-group {
                 margin-bottom: 15px;
@@ -300,7 +258,6 @@ header {
                     margin-bottom: 5px;
                     color: #333;
                 }
-
                 input, textarea {
                     width: 100%;
                     padding: 10px;
@@ -309,15 +266,12 @@ header {
                     font-size: 16px;
                     background-color: rgba(255, 255, 255, 0.8);
                 }
-
                 input[type="file"] {
                     padding: 0;
                 }
-
                 textarea {
                     resize: none;
                 }
-
                 button {
                     padding: 10px 20px;
                     background-color: #007bff;
@@ -327,7 +281,6 @@ header {
                     cursor: pointer;
                     font-size: 16px;
                     transition: background-color 0.3s ease;
-
                     &:hover {
                         background-color: #0056b3;
                     }
@@ -336,32 +289,6 @@ header {
         }
     }
 }
-
-// Media queries para responsive
-@media (min-width: 576px) {
-    .form-container {
-        max-width: 600px;
-    }
-}
-
-@media (min-width: 768px) {
-    .form-container {
-        max-width: 700px;
-    }
-}
-
-@media (min-width: 992px) {
-    .form-container {
-        max-width: 800px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .form-container {
-        max-width: 900px;
-    }
-}
-
 
 footer {
   position: relative;
@@ -458,7 +385,17 @@ footer {
   }
 }
 
-
+    @media (max-width: 768px) {
+      .projects-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 90%;
+      }
+    }
+  }
+  
 
 
 
@@ -539,4 +476,53 @@ footer {
           }
         }
     }
+    .form-container {
+      max-width: 700px;
+  }
 }
+
+// Media queries para responsive
+@media (min-width: 576px) {
+  .form-container {
+      max-width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-container {
+      max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form-container {
+      max-width: 900px;
+  }
+}
+
+
+// Media queries para diseño responsive
+@media (min-width: 576px) {
+  .content-container {
+      max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-container {
+      max-width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .content-container {
+      max-width: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-container {
+      max-width: 800px;
+  }
+}
+
