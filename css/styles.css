@@ -12,31 +12,37 @@ header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 92.3vh;
+  min-height: 100vh;
   background-image: url("../img/fondo.jpg");
   background-size: cover;
+  background-position: center;
 }
 .about-me .content-container {
-  background: rgba(255, 255, 255, 0.295);
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
   border-radius: 15px;
   padding: 20px;
   text-align: center;
-  max-width: 350px;
+  max-width: 600px;
   width: 100%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .about-me .content-container .image-container img {
   width: 100%;
+  max-width: 150px;
   border-radius: 50%;
   margin-bottom: 15px;
 }
 .about-me .content-container .text-container h1 {
   margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #333;
 }
 .about-me .content-container .text-container p {
   margin-bottom: 20px;
   color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 .about-me .content-container .text-container .buttons button {
   padding: 10px 20px;
@@ -52,6 +58,20 @@ header .logo {
   background-color: #0056b3;
 }
 
+@media (max-width: 768px) {
+  .about-me {
+    padding: 20px;
+  }
+  .about-me .content-container {
+    max-width: 90%;
+  }
+  .text-container h1 {
+    font-size: 1.5rem;
+  }
+  .text-container p {
+    font-size: 0.9rem;
+  }
+}
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -217,14 +237,15 @@ header .logo {
 .projects .card .card-content .card-buttons .web-btn:hover {
   background-color: #007f8c;
 }
-.projects .contact-form {
+
+.contact-form {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f4f4f4;
 }
-.projects .contact-form .form-container {
+.contact-form .form-container {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 20px;
@@ -234,20 +255,20 @@ header .logo {
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-.projects .contact-form .form-container h2 {
+.contact-form .form-container h2 {
   margin-bottom: 20px;
   color: #333;
 }
-.projects .contact-form .form-container form .form-group {
+.contact-form .form-container form .form-group {
   margin-bottom: 15px;
   text-align: left;
 }
-.projects .contact-form .form-container form .form-group label {
+.contact-form .form-container form .form-group label {
   display: block;
   margin-bottom: 5px;
   color: #333;
 }
-.projects .contact-form .form-container form .form-group input, .projects .contact-form .form-container form .form-group textarea {
+.contact-form .form-container form .form-group input, .contact-form .form-container form .form-group textarea {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
@@ -255,13 +276,13 @@ header .logo {
   font-size: 16px;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.projects .contact-form .form-container form .form-group input[type=file] {
+.contact-form .form-container form .form-group input[type=file] {
   padding: 0;
 }
-.projects .contact-form .form-container form .form-group textarea {
+.contact-form .form-container form .form-group textarea {
   resize: none;
 }
-.projects .contact-form .form-container form .form-group button {
+.contact-form .form-container form .form-group button {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -271,10 +292,11 @@ header .logo {
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
-.projects .contact-form .form-container form .form-group button:hover {
+.contact-form .form-container form .form-group button:hover {
   background-color: #0056b3;
 }
-.projects footer {
+
+footer {
   position: relative;
   width: 100%;
   background-color: #3586ff;
@@ -286,7 +308,7 @@ header .logo {
   flex-direction: column;
   margin-top: 100px;
 }
-.projects footer .social-icon {
+footer .social-icon {
   position: relative;
   display: flex;
   justify-content: center;
@@ -295,27 +317,27 @@ header .logo {
   flex-wrap: wrap;
   z-index: 1001;
 }
-.projects footer .social-icon li {
+footer .social-icon li {
   list-style: none;
 }
-.projects footer .social-icon li a {
+footer .social-icon li a {
   font-size: 2em;
   color: white;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
 }
-.projects footer .social-icon li a:hover {
+footer .social-icon li a:hover {
   transform: translateY(-10px);
 }
-.projects footer p {
+footer p {
   color: white;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 5px;
   z-index: 1001;
 }
-.projects footer .waves .wave {
+footer .waves .wave {
   position: absolute;
   top: -100px;
   left: 0;
@@ -324,30 +346,31 @@ header .logo {
   background: url("../img/wave.png");
   background-size: 1000px 100px;
 }
-.projects footer .waves .wave#wave1 {
+footer .waves .wave#wave1 {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
   animation: animateWave 4s linear infinite;
 }
-.projects footer .waves .wave#wave2 {
+footer .waves .wave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
   animation: animateWave_02 4s linear infinite;
 }
-.projects footer .waves .wave#wave3 {
+footer .waves .wave#wave3 {
   z-index: 1000;
   opacity: 0.2;
   bottom: 15px;
   animation: animateWave 3s linear infinite;
 }
-.projects footer .waves .wave#wave4 {
+footer .waves .wave#wave4 {
   z-index: 999;
   opacity: 0.7;
   bottom: 20px;
   animation: animateWave_02 3s linear infinite;
 }
+
 @keyframes animateWave {
   0% {
     background-position-x: 1000px;
@@ -365,42 +388,26 @@ header .logo {
   }
 }
 @media (max-width: 768px) {
-  .projects .projects-container {
+  .projects-container {
     flex-direction: column;
     align-items: center;
   }
-  .projects .card {
+  .card {
     width: 90%;
   }
 }
-
 @media (max-width: 768px) {
   .about-me {
-    flex-direction: column;
-    text-align: center;
+    padding: 20px;
   }
-  .about-me .text-container {
-    padding-left: 0;
-    margin-top: 20px;
+  .about-me .content-container {
+    max-width: 90%;
   }
-  .about-me .text-container h1 {
-    font-size: 2rem;
+  .text-container h1 {
+    font-size: 1.5rem;
   }
-  .about-me .text-container p {
-    font-size: 1rem;
-  }
-  .about-me .text-container .buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .about-me .text-container .buttons button {
-    width: 100%;
-  }
-  .about-me .image-container img {
-    max-width: 150px;
-  }
-  .form-container {
-    max-width: 700px;
+  .text-container p {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 576px) {
