@@ -21,7 +21,7 @@ header {
   background-position: center;
   
   .content-container {
-      background: rgba(255, 255, 255, 0.3); // Fondo semitransparente
+      background: rgba(241, 239, 239, 0.3); // Fondo semitransparente
       backdrop-filter: blur(5px); // Efecto glass
       border-radius: 15px;
       padding: 20px;
@@ -185,11 +185,11 @@ header {
 .projects {
     padding: 40px 0;
     text-align: center;
-    background-color: #747977;
+    background-color: $bg-wave;
     .projects-title {
       font-size: 2.5rem;
       margin-bottom: 30px;
-      color: #00adb5;
+      color: white;
     }
     .projects-container {
       display: flex;

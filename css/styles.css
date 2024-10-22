@@ -18,7 +18,7 @@ header .logo {
   background-position: center;
 }
 .about-me .content-container {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(241, 239, 239, 0.3);
   backdrop-filter: blur(5px);
   border-radius: 15px;
   padding: 20px;
@@ -163,12 +163,12 @@ header .logo {
 .projects {
   padding: 40px 0;
   text-align: center;
-  background-color: #747977;
+  background-color: #3586ff;
 }
 .projects .projects-title {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #00adb5;
+  color: white;
 }
 .projects .projects-container {
   display: flex;
